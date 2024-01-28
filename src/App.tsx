@@ -116,7 +116,7 @@ function App() {
 
     const signer = await provider?.getSigner();
 
-    const contract = new Contract('0x211422B33119e8E1d713A11eDEfd470e16E83064', abi, signer);
+    const contract = new Contract('0x691599A0ddd71f855fB7c5E21509023FF605864F', abi, signer);
     const res = await contract.spin();
 
     hook();
