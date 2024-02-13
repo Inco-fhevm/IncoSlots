@@ -16,7 +16,7 @@ import {Web3Provider} from '@ethersproject/providers';
 import WebApp from '@twa-dev/sdk'
 
 async function fundWallet(walletAddress: string): Promise<boolean> {
-  const response = await fetch('https://faucet.inco.network/api/get-faucet', {
+  const response = await fetch('https://faucet.testnet.inco.org/api/get-faucet', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -100,8 +100,8 @@ function App() {
           symbol: "INCO",
           decimals: 18,
         },
-        rpcUrls: ["https://evm-rpc.inco.network/"],
-        blockExplorerUrls: ["https://explorer.inco.network/"],
+        rpcUrls: ["https://testnet.inco.org/"],
+        blockExplorerUrls: ["https://explorer.testnet.inco.org/"],
       },
     ]);
   }
@@ -116,7 +116,7 @@ function App() {
 
     const signer = await provider?.getSigner();
 
-    const contract = new Contract('0x691599A0ddd71f855fB7c5E21509023FF605864F', abi, signer);
+    const contract = new Contract('0x4782Ed86C4A799BDC6120885f2ACAbCE47B908A8', abi, signer);
     const res = await contract.spin();
 
     hook();
