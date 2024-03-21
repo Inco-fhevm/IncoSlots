@@ -16,7 +16,7 @@ import {Web3Provider} from '@ethersproject/providers';
 import WebApp from '@twa-dev/sdk'
 
 async function fundWallet(walletAddress: string): Promise<boolean> {
-  const response = await fetch('https://faucet.testnet.inco.org/api/get-faucet', {
+  const response = await fetch('https://faucetdev.testnet.inco.org/api/get-faucet', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
