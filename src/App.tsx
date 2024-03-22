@@ -13,8 +13,6 @@ import WalletIcon from './assets/wallet_icon.svg';
 import SlotMachine from './SlotMachine.svelte';
 import {Web3Provider} from '@ethersproject/providers';
 
-import WebApp from '@twa-dev/sdk'
-
 async function fundWallet(walletAddress: string): Promise<boolean> {
   const response = await fetch('https://faucetdev.testnet.inco.org/api/get-faucet', {
     method: 'POST',
