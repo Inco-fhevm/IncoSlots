@@ -51,7 +51,8 @@ function App() {
       w0?.getEthersProvider().then(async (provider) => {
         const balance = await getBalance(provider);
         if (balance?.lte(100000000000000)) {
-          const funded = await fundWallet(w0.address);
+          await fundWallet(w0.address);
+          /*
           if (funded) {
             setIsFunded(true);
           } else {
@@ -60,9 +61,9 @@ function App() {
               message: "Could not fund wallet",
             });
           }
-        } else {
-          setIsFunded(true);
+          */
         }
+        setIsFunded(true);
       });
     })
   }, [w0])
